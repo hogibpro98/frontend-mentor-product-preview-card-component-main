@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Fraunces">
+
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --bg-color: #f3eae3;
+      --bg-button-add-to-cart: #3d8168;
+      --text-price-discount-color: #42846b;
+      --white-color: #ffffff;
+      --text-name-color: #1e222b;
+      --text-default: #adadb5;
+    }
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: var(--bg-color);
+    }
+    .container {
+      font-family: 'Montserrat', serif;
+      font-size: 12px;
+      color: var(--text-default);
+      width: 343px;
+      background-color: var(--white-color);
+      margin: 0 16px;
+      overflow: hidden;
+      border-radius: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .container .image-product {
+      background-image: url('./images/image-product-mobile.jpg');
+      background-size: cover;
+      height: 240px;
+      border-top-right-radius: 14px;
+      border-top-left-radius: 14px;
+    }
+    .container .perfume {
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+    .content {
+      padding: 14px 24px 24px 24px;
+    }
+    h2.name-product {
+      font-family: 'Fraunces', serif;
+      font-size: 32px;
+      color: var(--text-name-color);
+      font-weight: bold;
+      margin: 0 0 14px 0;
+      letter-spacing: 1px;
+      word-spacing: -2px;
+      line-height: 35px;
+    }
+    span.description {
+      letter-spacing: 1px;
+      word-spacing: 1px;
+      line-height: 23px;
+    }
+    .price {
+      margin: 18px 0 15px 0;
+      display: flex;
+      justify-content: space-between;
+      width: 66%;
+      align-items: center;
+    }
+    span.price-discount {
+      font-size: 34px;
+      font-weight: bold;
+      font-family: 'Fraunces', serif;
+      letter-spacing: 0.4px;
+      color: var(--text-price-discount-color);
+    }
+    span.original {
+      text-decoration: line-through;
+      font-size: 13px;
+    }
+    button.button-add-to-cart {
+      height: 48px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      text-align: center;
+      color: #ffff;
+      font-size: 14px;
+      font-family: 'Montserrat', serif;
+      background: var(--bg-button-add-to-cart);
+      line-height: 0px;
+    }
+    button.button-add-to-cart img {
+      margin: 0 11px 0 0px;
+    }
+    button.button-add-to-cart span {
+      word-spacing: 1px;
+      font-weight: 700;
+    }
+    @media screen and (min-width: 768px) {
+      .container {
+        display: flex;
+        width: 600px;
+      }
+      .container .image-product {
+        background-image: url(./images/image-product-desktop.jpg);
+        height: 450px;
+        width: 50%;
+        border-radius: 0;
+      }
+      .price {
+        margin: 18px 0 15px 0;
+      }
+      .content {
+        padding: 20px 24px 24px 32px;
+        width: 39%;
+      }
+      .container .perfume {
+        margin-bottom: 16px;
+      }
+      h2.name-product {
+        margin: 0 0 20px 0;
+      }
+      .price {
+        margin: 24px 0 24px 0;
+        width: 83%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="image-product"></div>
+    <div class="content">
+      <p class="perfume">Perfume</p>
+
+      <h2 class="name-product">Gabrielle Essence Eau De Parfum</h2>
+  
+      <span class="description">
+        A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+        Perfumer-Creator for the House of CHANEL.
+      </span>
+    
+      <div class="price">
+        <span class="price-discount">
+          $149.99
+        </span>
+        <span class="original">
+          $169.99
+        </span>
+      </div>
+      
+      <button class="button-add-to-cart">
+        <img src="./images/icon-cart.svg" alt="icon">
+        <span>Add to Cart</span>
+      </button>
+    </div>
+  </div>
+</body>
+</html>
